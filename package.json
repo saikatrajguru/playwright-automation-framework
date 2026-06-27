@@ -1,0 +1,25 @@
+{
+  "name": "playwright-automation-framework",
+  "version": "1.0.0",
+  "description": "Production-grade Playwright E2E automation framework with TypeScript, POM, BDD/Cucumber, and hybrid API+UI testing",
+  "author": "Saikat Rajguru",
+  "license": "MIT",
+  "scripts": {
+    "regression":    "npx playwright test",
+    "webTests":      "npx playwright test --grep @Web",
+    "APITests":      "npx playwright test --grep @API",
+    "bdd":           "npx cucumber-js --exit",
+    "bdd:report":    "npx cucumber-js --parallel 2 --exit --format html:cucumber-report.html",
+    "safari":        "npx playwright test --config playwright.safari.config.js",
+    "report":        "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.0",
+    "@playwright/test": "^1.40.0",
+    "allure-playwright": "^2.0.0-beta.15",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
